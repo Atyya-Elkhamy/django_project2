@@ -1,0 +1,15 @@
+{% extends "parts/base.html" %}
+{% load static %}
+{%block content%}
+    <main class="bg-warning p-3">
+        <header>
+            <h1 class="m-auto w-50">Employee List</h1>
+        </header>
+        <form id="form" method="POST" class="form-control w-50 m-auto" style='background-color:gray; border:none'>
+            {% csrf_token %}
+            {{ form.as_p }} 
+            <button type="submit" class="btn btn-primary w-50 m-auto" id="butn">Submit</button>
+        </form>
+    </main>
+    <script src="{% static 'js/emp.js' %}"></script>
+{%endblock content%}
