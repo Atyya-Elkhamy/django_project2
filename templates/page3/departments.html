@@ -7,17 +7,17 @@
 
 {% block content %}
 
-<div class="w-100 bg-warning p-3 text-center h-100">
+<div class="w-100 p-3 text-center h-100" id="main">
     <h2 class="">Departments</h2>
-    <form method="post" class="form-control w-50 bg-light m-auto">
+    <form method="post" class="form-control w-50 bg-light m-auto mt-4">
         {% csrf_token %}
         {{form.as_p}}
         
-        <button type="submit" class="btn btn-primary w-50 m-auto">Submit</button>
+        <button type="submit" class="btn btn-primary w-50 m-auto p-3">Submit</button>
     </form>
     <div class="mt-4">
-        <a href="{% url 'page1' %}" class="btn btn-secondary w-25 m-2">Add Employee</a>
-        <a href="{% url 'page2' %}" class="btn btn-secondary w-25 m-2">Add project</a>
+        <a href="{% url 'page1' %}" class="btn btn-secondary w-25 m-2 p-3">Add Employee</a>
+        <a href="{% url 'page2' %}" class="btn btn-secondary w-25 m-2 p-3">Add project</a>
     </div>
 </div>
 <script src="{% static "js/dept.js" %}"></script>

@@ -5,5 +5,8 @@ html, body {
 }
 
 main {
-    flex: 1; /* Pushes the footer to the bottom */
+    flex: 1; 
+}
+nav{
+    background-color: lightslategrey !important;
 }

@@ -3,17 +3,17 @@
 {% load static %}
 {% block title %}project_details{%endblock title%}
 {%block css%}
-<link rel="stylesheet" href="{% static "css/dept.css" %}">
+<link rel="stylesheet" href="{% static "css/project.css" %}">
 {%endblock css%}
 {% block content %}
 
-<div class="p-3 bg-warning text-center w-100 h-100">
+<div class="p-3 text-center w-100 h-100" id="main">
     <h2 class="m-auto w-50">Project Details </h2>
-    <form method="post" class='form-control w-50 m-auto text-center bg-light p-3'>
+    <form method="post" class='form-control w-50 m-auto text-center bg-light p-3 mt-4'>
         {% csrf_token %}
         {{form.as_p}}
         
-        <button type="submit" class="btn btn-l btn-primary w-50 m-4">Submit</button>
+        <button type="submit" class="btn btn-l btn-primary w-50 m-4" id="btn">Submit</button>
     </form>
 
     <div class="mt-4">

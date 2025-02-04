@@ -6,11 +6,11 @@
 {%endblock css%}
 
 {% block content %}
-    <div class="bg-warning p-3 w-100 text-center">
+    <div class=" p-3 w-100 text-center" id="main">
         <header>
             <h1 class="m-auto w-50">Employee List</h1>
         </header>
-        <form id="form" method="POST" class="form-control w-50 m-auto bg-light" style='border:none'>
+        <form id="form" method="POST" class="form-control w-50 m-auto bg-light mt-4" style='border:none'>
             {% csrf_token %}
             {{form}} 
             <button type="submit" class="btn btn-primary w-50 m-3" id="butn">Submit</button>
