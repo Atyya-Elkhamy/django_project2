@@ -1,0 +1,20 @@
+{% extends 'parts/base.html' %}
+{% load static %}
+
+{%block css%}
+<link rel="stylesheet" href="{% static "css/dept.css" %}">
+{%endblock css%}
+
+{% block content %}
+
+<div class="w-100 bg-warning p-3 text-center">
+    <h2 class="">Departments</h2>
+    <form method="post" class="form-control w-50 bg-light m-auto">
+        {% csrf_token %}
+        {{form.as_p}}
+        
+        <button type="submit" class="btn btn-primary w-50 m-auto">Submit</button>
+    </form>
+</div>
+<script src="{% static "js/dept.js" %}"></script>
+{% endblock content %}

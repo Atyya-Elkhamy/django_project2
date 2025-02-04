@@ -10,7 +10,6 @@ def store_page1_data(request):
             return redirect("page1")
         else:
             return render(request, "page1/emps.html", {"form": form})
-
     form = EmpForm()
     return render(request, "page1/emps.html", {"form": form})
 

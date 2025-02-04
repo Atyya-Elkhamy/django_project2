@@ -1,0 +1,20 @@
+
+{% extends "parts/base.html" %}
+{% load static %}
+{%block css%}
+<link rel="stylesheet" href="{% static "css/dept.css" %}">
+{%endblock css%}
+{% block content %}
+
+<div class="p-3 bg-warning text-center w-100 h-100">
+    <h2 class="m-auto w-50">Project Details </h2>
+    <form method="post" class='form-control w-50 m-auto text-center bg-light p-3'>
+        {% csrf_token %}
+        {{form.as_p}}
+        
+        <button type="submit" class="btn btn-primary w-50 m-4">Submit</button>
+    </form>
+    <button class="btn btn-danger w-50 m-auto" id="btn">Submit</button>
+</div>
+    <script src="{% static "js/project.js" %}"></script>
+{% endblock content %}
