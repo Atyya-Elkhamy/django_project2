@@ -1,6 +1,6 @@
 {% extends "parts/base.html" %}
 {% load static %}
-
+{% block title %}emp_data{%endblock title%}
 {%block css%}
 <link rel="stylesheet" href="{% static "css/emp.css" %}">
 {%endblock css%}
@@ -15,6 +15,10 @@
             {{form}} 
             <button type="submit" class="btn btn-primary w-50 m-3" id="butn">Submit</button>
         </form>
+        <div class="mt-4">
+            <a href="{% url 'page2' %}" class="btn btn-secondary w-25 m-2">Add project</a>
+            <a href="{% url 'page3' %}" class="btn btn-secondary w-25 m-2">Add department</a>
+        </div>
     </div>
     <script src="{% static "js/emp.js" %}"></script>
 {% endblock content %}

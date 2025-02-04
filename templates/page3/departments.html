@@ -1,6 +1,6 @@
 {% extends 'parts/base.html' %}
 {% load static %}
-
+{% block title %}departments{%endblock title%}
 {%block css%}
 <link rel="stylesheet" href="{% static "css/dept.css" %}">
 {%endblock css%}
@@ -15,6 +15,10 @@
         
         <button type="submit" class="btn btn-primary w-50 m-auto">Submit</button>
     </form>
+    <div class="mt-4">
+        <a href="{% url 'page1' %}" class="btn btn-secondary w-25 m-2">Add Employee</a>
+        <a href="{% url 'page2' %}" class="btn btn-secondary w-25 m-2">Add project</a>
+    </div>
 </div>
 <script src="{% static "js/dept.js" %}"></script>
 {% endblock content %}

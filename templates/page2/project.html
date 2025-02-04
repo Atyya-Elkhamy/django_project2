@@ -1,6 +1,7 @@
 
 {% extends "parts/base.html" %}
 {% load static %}
+{% block title %}project_details{%endblock title%}
 {%block css%}
 <link rel="stylesheet" href="{% static "css/dept.css" %}">
 {%endblock css%}
@@ -12,9 +13,13 @@
         {% csrf_token %}
         {{form.as_p}}
         
-        <button type="submit" class="btn btn-primary w-50 m-4">Submit</button>
+        <button type="submit" class="btn btn-l btn-primary w-50 m-4">Submit</button>
     </form>
-    <button class="btn btn-danger w-50 m-auto" id="btn">Submit</button>
+
+    <div class="mt-4">
+        <a href="{% url 'page1' %}" class="btn btn-secondary w-25 m-2">Add Employee</a>
+        <a href="{% url 'page3' %}" class="btn btn-secondary w-25 m-2">Add department</a>
+    </div>
 </div>
     <script src="{% static "js/project.js" %}"></script>
 {% endblock content %}
