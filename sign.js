@@ -7,6 +7,39 @@ $(document).ready(function() {
         backdrop: 'static',
         keyboard: false
     });
+    $('#home-btn').click(function() {
+        $('#signupModal').hide()
+        $('.modal-backdrop').remove();
+        $('body').removeAttr('style');
+    });
+    $('#signin-home-btn').click(function() {
+        $('#signinModal').hide()
+        $('.modal-backdrop').remove();
+        $('body').removeAttr('style');
+    });
+
+    $('#formSubmit').click(function(e) {
+        e.preventDefault();
+
+        const name = $('#name').val().trim();
+        const address = $('#address').val().trim();
+        const phone = $('#phone').val().trim();
+        const age = parseInt($('#age').val().trim());
+        const email = $('#email').val().trim();
+        const password = $('#password').val().trim();
+
+        if (
+            Validator.nameValidation(name) &&
+            Validator.addressValidation(address) &&
+            Validator.phoneValidation(phone) &&
+            Validator.ageValidation(age) &&
+            Validator.emailValidation(email) &&
+            Validator.passwordValidation(password)
+        ) {
+            alert("All validations passed! Form can be submitted.");
+            $('#signupModal').modal('hide');
+        }
+    });
 
     class Validator {
         static nameValidation(name) {
